@@ -1,0 +1,38 @@
+JSON FOR POST METHOD
+
+{
+"id":1,
+"name":"narayan",
+"salary":"Linkedin",
+"gender":"male",
+"notes":"new Joinee",
+"startDate":"March",
+"department":"Mech"
+}
+
+//////////////////////////
+1.  ADD BELOW CODE IN APPLICATION PROPERTIES FOLDER
+
+       spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+       spring.datasource.url=jdbc:mysql://localhost:3306/payroll_db
+       spring.datasource.username=root
+       spring.datasource.password=root
+       spring.jpa.hibernate.ddl-auto=create-drop
+
+2. CREATE DB, USE THAT DB & ADD THAT DBNAME IN APPLICATION PROPERTIES FOLDER
+       spring.datasource.url=jdbc:mysql://localhost:3306/payroll_db
+
+
+3. CREATE dto SubPackage, Add  Class of ResponseDTO
+   Add @Data  to class level.
+
+   Create Parameteised Construtor.
+
+   In ResponseDTO class add these attributes
+        private String message;
+        private Object object;
+
+
+4. In dto Subpackage, Add other Class {EntityClassName}DTO
+   Add @Data @NoArgsConstructor to class level.
+   Add same attributes as model/entity class
