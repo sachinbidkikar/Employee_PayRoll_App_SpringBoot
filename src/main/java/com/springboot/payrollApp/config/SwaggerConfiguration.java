@@ -11,6 +11,6 @@ import org.springframework.context.annotation.Configuration;
 public class SwaggerConfiguration {
     @Bean
     public OpenAPI baseOpenAPI() {
-        return new OpenAPI().info(new Info().title("Employee PayRoll Doc").version("1.0.0").description("Spring Doc"));
+        return new OpenAPI().info(new Info().title("Employee PayRoll Documentation").version("1.0.0").description("Spring Doc"));
     }
 }
